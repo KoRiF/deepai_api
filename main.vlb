@@ -1,56 +1,71 @@
 ﻿[RESTResponse1]
-Coordinates=10,10,96,285
+Coordinates=10,10,113,366
 
 [FDMemTable1]
-Coordinates=214,10,84,33
+Coordinates=214,10,99,36
 Visible=False
 
 [RESTResponseDataSetAdapter1]
-Coordinates=355,281,174,33
+Coordinates=355,281,205,36
 
 [imgMain]
-Coordinates=10,366,56,51
+Coordinates=10,366,63,58
 
 [imgStyle]
-Coordinates=394,10,57,51
+Coordinates=394,10,64,58
 
 [Label1]
-Coordinates=232,305,46,51
+Coordinates=232,305,53,58
 
 [RESTRequest1]
-Coordinates=116,10,88,141
+Coordinates=116,10,103,168
 Visible=True
 
 [Label6]
-Coordinates=475,305,46,51
+Coordinates=475,305,53,58
 
 [ImgResult]
-Coordinates=10,305,64,51
+Coordinates=10,305,72,58
 
 [Label2]
-Coordinates=419,305,46,51
+Coordinates=419,305,53,58
 
 [IdHTTP1]
-Coordinates=363,333,56,33
+Coordinates=363,333,66,36
 
 [RESTClient1]
-Coordinates=308,10,76,69
+Coordinates=308,10,89,80
 
 [edtResultLink]
-Coordinates=140,305,82,51
+Coordinates=140,305,93,58
 
 [Label3]
-Coordinates=84,305,46,51
+Coordinates=84,305,53,58
 
 [btnGetImg]
-Coordinates=344,305,65,51
+Coordinates=344,305,74,58
 
 []
 Coordinates=76,366,105,51
 
 [BindSourceDB1]
-Coordinates=214,10,92,105
+Coordinates=214,10,106,124
 
 [BindingsList1]
-Coordinates=125,170,82,33
+Coordinates=125,170,91,36
+
+[OpenPictureDialog1]
+Coordinates=238,153,130,36
+
+[btnStyleImage]
+Coordinates=142,1,97,58
+
+[FDMemTable1id]
+Coordinates=142,382,109,36
+
+[FDMemTable1output_url]
+Coordinates=258,208,156,36
+
+[btnMainImage]
+Coordinates=142,225,96,58
 

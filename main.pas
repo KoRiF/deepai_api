@@ -39,6 +39,7 @@ type
     btnMainImage: TButton;
     btnStyleImage: TButton;
     OpenPictureDialog1: TOpenPictureDialog;
+    SavePictureDialog1: TSavePictureDialog;
     procedure btnGetImgClick(Sender: TObject);
     procedure GetImg(urls : string);
     procedure FormShow(Sender: TObject);
@@ -92,6 +93,7 @@ begin
   RESTRequest1.Execute;
   FDMemTable1.Open;
                                 //urls := StringReplace(urls, 'https', 'http', [rfReplaceAll, rfIgnoreCase]);
+  ShowMessage(Format('Output image located at "%s"', [FDMemTable1OUTPUT_URL.AsString]));
   GetImg(FDMemTable1OUTPUT_URL.AsString);
 
 end;
@@ -110,12 +112,18 @@ begin
         MS.Clear;
         urls := StringReplace(urls, 'https', 'http', [rfReplaceAll, rfIgnoreCase]);
         IdHTTP1.Get(urls, MS);
+
+        if SavePictureDialog1.Execute() then
+        begin
+          MS.Position := 0;
+          MS.SaveToFile(SavePictureDialog1.FileName);
+          ShowMessage(Format('Transformed picture saved as "%s"', [SavePictureDialog1.FileName]));
+        end;
+
         MS.Position := 0;
-        MS.SaveToFile(resourcesDirectory + '\output.jpg');
         IMG.LoadFromStream(MS);
         ImgResult.Picture.Assign(IMG);
         Application.ProcessMessages;
-
     finally
       IMG.Free;
     end;

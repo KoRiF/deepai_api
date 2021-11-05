@@ -5,12 +5,12 @@ object Form1: TForm1
   ClientHeight = 517
   ClientWidth = 984
   Color = clBtnFace
+  CustomTitleBar.CaptionAlignment = taCenter
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -204,7 +204,6 @@ object Form1: TForm1
     end
   end
   object IdHTTP1: TIdHTTP
-    AllowCookies = True
     ProxyParams.BasicAuthentication = False
     ProxyParams.ProxyPort = 0
     Request.ContentLength = -1
@@ -242,5 +241,9 @@ object Form1: TForm1
   object OpenPictureDialog1: TOpenPictureDialog
     Left = 288
     Top = 392
+  end
+  object SavePictureDialog1: TSavePictureDialog
+    Left = 624
+    Top = 472
   end
 end
